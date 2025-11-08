@@ -1,16 +1,64 @@
-# task_manager
+# Flutter Developer Assessment
 
-A new Flutter project.
+A simple Flutter app that displays a list of items (tasks) and allows users to **add**, **edit**, and **delete** them.  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🧩 Features
 
-A few resources to get you started if this is your first Flutter project:
+- View a list of tasks on the home screen
+- Add a new task using the floating action button
+- Edit an existing task by tapping on it
+- Swipe to delete a task
+- Persistent local storage using **SharedPreferences**
+- Light and dark theme toggle
+- Clean UI and custom reusable widgets
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧠 Architecture & State Management
+
+This app follows the **MVVM (Model–View–ViewModel)** architecture pattern combined with **Riverpod** for state management.  
+This ensures a clear separation of concerns:
+- **Model**: Represents the data layer (task structure and storage).
+- **ViewModel**: Handles the app’s business logic and state updates.
+- **View**: The UI layer that listens to ViewModel changes.
+
+Using Riverpod within MVVM allows for reactive, maintainable, and easily testable code.
+
+---
+
+## 💾 Storage
+
+Data is persisted locally using **SharedPreferences**, a lightweight key-value storage solution for Flutter.
+
+---
+
+## 🧱 Folder Structure
+
+lib/
+│
+├── main.dart # Entry point
+├── models/ # Data models
+├── viewmodels/ # Business logic & app state (MVVM)
+├── provider/ # Riverpod providers
+├── view/ # App screens (Home, Add/Edit)
+├── widgets/ # Reusable custom widgets
+
+
+🛠️ Tools & Libraries Used
+Flutter (v3.x)
+Riverpod – State management
+SharedPreferences – Local data persistence
+MVVM architecture – Clean code structure
+Material Design – UI styling
+intl – DateTime formating
+uuid – Unique ID generation for tasks
+
+
+📸 Screenshots
+Below are some screenshots from the app (available in the /screenshots folder):
+
+| Home Screen                         | Add Item                         | Edit Item                          | Dark Mode                          |
+|-------------------------------------|----------------------------------|------------------------------------|------------------------------------|
+| ![Home](screenshots/light_mode.png) | ![Add](screenshots/add_task.png) | ![Edit](screenshots/edit_task.png) | ![Dark](screenshots/dark_mode.png) |

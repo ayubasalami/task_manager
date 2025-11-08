@@ -4,8 +4,8 @@ import 'package:flutter_riverpod/legacy.dart';
 
 import '../models/task_model.dart';
 import '../repository/task_repository.dart';
+import '../view_model/app_theme_view_model.dart';
 import '../view_model/task_view_model.dart';
-import '../view_model/theme_view_model.dart';
 
 final taskRepositoryProvider = Provider<TaskRepository>((ref) {
   return TaskRepository();
