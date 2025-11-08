@@ -1,6 +1,6 @@
 # Flutter Developer Assessment
 
-A simple Flutter app that displays a list of items (tasks) and allows users to **add**, **edit**, and **delete** them.  
+A simple Flutter app that displays a list of items (tasks) and allows users to **add**, **edit**, and **delete** them.
 
 ---
 
@@ -36,15 +36,6 @@ Data is persisted locally using **SharedPreferences**, a lightweight key-value s
 
 ## 🧱 Folder Structure
 
-lib/
-│
-├── main.dart # Entry point
-├── models/ # Data models
-├── viewmodels/ # Business logic & app state (MVVM)
-├── provider/ # Riverpod providers
-├── view/ # App screens (Home, Add/Edit)
-├── widgets/ # Reusable custom widgets
-
 
 🛠️ Tools & Libraries Used
 Flutter (v3.x)
@@ -52,13 +43,22 @@ Riverpod – State management
 SharedPreferences – Local data persistence
 MVVM architecture – Clean code structure
 Material Design – UI styling
-intl – DateTime formating
+intl – DateTime formatting
 uuid – Unique ID generation for tasks
 
-
-📸 Screenshots
-Below are some screenshots from the app (available in the /screenshots folder):
-
 | Home Screen                         | Add Item                         | Edit Item                          | Dark Mode                          |
-|-------------------------------------|----------------------------------|------------------------------------|------------------------------------|
+| ----------------------------------- | -------------------------------- | ---------------------------------- | ---------------------------------- |
 | ![Home](screenshots/light_mode.png) | ![Add](screenshots/add_task.png) | ![Edit](screenshots/edit_task.png) | ![Dark](screenshots/dark_mode.png) |
+
+
+
+```plaintext
+lib/
+│
+├── main.dart             # Entry point
+├── models/               # Data models
+├── viewmodels/           # Business logic & app state (MVVM)
+├── provider/             # Riverpod providers
+├── view/                 # App screens (Home, Add/Edit)
+├── widgets/              # Reusable custom widgets
+└── theme/                # Light & dark theme setup
